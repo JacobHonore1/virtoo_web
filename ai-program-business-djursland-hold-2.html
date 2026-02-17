@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Program – Business Djursland (Hold 2)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<!-- Login -->
+<section id="login-gate" class="hero">
+  <div class="container hero-inner" style="justify-content:center;">
+    <div class="card" style="max-width:420px;width:100%;">
+      <div class="card-body">
+        <h2>Adgang til AI program</h2>
+
+        <p>Dette deltagerområde er forbeholdt deltagere på AI forløbet.</p>
+        <p>Indtast den kode, du har modtaget, for at få adgang.</p>
+
+        <input
+          type="password"
+          id="access-code"
+          placeholder="Adgangskode"
+          style="width:100%;padding:12px;margin:16px 0;border-radius:6px;border:none;"
+        />
+
+        <button class="btn" style="width:100%;" onclick="unlockPage()">Få adgang</button>
+
+        <p id="login-error" style="margin-top:12px;display:none;color:#ffb3b3;">
+          Forkert kode
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Indhold -->
+<main id="protected-content" style="display:none;">
+
+<!-- Velkomstboks -->
+<section class="services" style="margin-top:40px;">
+  <div class="container">
+
+    <article class="card">
+      <div class="card-body">
+
+        <br><h1>Velkommen til AI forløbet<br>Business Djursland – Hold 2</h1>
+
+        <p>Tak fordi du deltager i AI forløbet.</p><br>
+
+        <p>Det betyder meget for os, at du har valgt at bruge tid og energi på at arbejde seriøst med AI i din virksomhed.</p>
+
+        <p>Vores ambition er at gøre AI brugbart og værdiskabende i praksis.</p>
+
+        <p>Vi vil gøre os umage gennem hele forløbet og støtte jer med relevant viden, klare forklaringer og meningsfulde øvelser.</p>
+
+        <p>Alt tager udgangspunkt i jeres egne opgaver og virkelighed.</p><br>
+
+        <p>Her samler vi overblik, materialer og ressourcer fra forløbet, efterhånden som vi bevæger os gennem modulerne.</p>
+
+        <p>Vi håber, at du får stort udbytte af forløbet.</p><br>
+
+        <p>Positiv feedback og gode erfaringer deler du meget gerne med Business Djursland.</p><br>
+
+        <p>Har du forslag til forbedringer eller input til, hvordan vi kan gøre forløbet endnu bedre, modtager vi dem meget gerne på <a href="mailto:contact@virtoo.ai">contact@virtoo.ai</a>.</p>
+
+        <p style="margin-top:24px;">
+          Venlig hilsen<br>
+          <strong>Jacob og Adam</strong><br>
+          Virtoo
+        </p>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Moduler -->
+<section class="services">
+  <div class="container cards-grid">
+
+    <!-- Modul 1 -->
+    <article class="card">
+      <div class="card-body">
+
+        <div>
+          <h2>Modul 1 #Afholdt#<br>Fra nysgerrig til første AI Assistent</h2>
+
+          <p>
+            Tirsdag den 20. januar 2025<br>
+            Klokken 13.00–16.00
+          </p>
+
+          <p>
+            Introduktion til AI og sprogmodeller.
+            Fokus på prompts, instruktioner og opbygning af
+            en første AI assistent baseret på egne opgaver.
+          </p>
+        </div>
+
+        <!-- Luft mellem tekst og knapper -->
+        <div style="height:16px;"></div>
+
+        <div class="card-actions">
+          <a
+  class="btn"
+  style="width:100%;"
+  href="https://drive.google.com/drive/folders/1YZL7ttfbAJ5zrJDjRIxVOKf0MxBpCkjB?usp=drive_link"
+  target="_blank"
+>
+  Se materialet på Google Drive
+</a>
+          
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Modul 2 -->
+    <article class="card">
+      <div class="card-body">
+
+        <div>
+          <h2>Modul 2<br>Fra hverdag til strategi med AI</h2>
+
+          <p>
+            Tirsdag den 3. februar 2025<br>
+            Klokken 13.00–16.00
+          </p>
+
+          <p>
+            Erfaringer med Assistenter kobles til arbejdsprocesser
+            og strategisk beslutningsstøtte gennem konkrete AI værktøjer.
+          </p>
+        </div>
+
+        <div style="height:16px;"></div>
+
+        <div class="card-actions">
+          <span class="btn btn-light" style="width:100%;opacity:0.6;cursor:default;">
+            Ikke tilgængeligt endnu
+          </span>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Modul 3 -->
+    <article class="card">
+      <div class="card-body">
+
+        <div>
+          <h2>Modul 3<br>Optimering og AI netværk</h2>
+
+          <p>
+            Tirsdag den 24. februar 2025<br>
+            Klokken 13.00–16.00
+          </p>
+
+          <p>
+            Videreudvikling af Assistenter samt fælles
+            erfaringsdeling og etablering af et varigt AI netværk.
+          </p>
+        </div>
+
+        <div style="height:16px;"></div>
+
+        <div class="card-actions">
+          <span class="btn btn-light" style="width:100%;opacity:0.6;cursor:default;">
+            Ikke tilgængeligt endnu
+          </span>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="script.js"></script>
+<script>
+const ACCESS_CODE = "BD2_2026";
+
+if (sessionStorage.getItem("ai_program_access") === "granted") {
+  showContent();
+}
+
+function unlockPage() {
+  const input = document.getElementById("access-code").value.trim();
+  const error = document.getElementById("login-error");
+
+  if (input === ACCESS_CODE) {
+    sessionStorage.setItem("ai_program_access", "granted");
+    showContent();
+  } else {
+    error.style.display = "block";
+  }
+}
+
+function showContent() {
+  document.getElementById("login-gate").style.display = "none";
+  document.getElementById("protected-content").style.display = "block";
+}
+</script>
+
+</body>
+</html>
